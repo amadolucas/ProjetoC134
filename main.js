@@ -15,11 +15,11 @@ function setup() {
   video.size(380,380);
   video.hide();
   objectDetector = ml5.objectDetector('cocossd', modelLoaded);
-  document.getElementById("status").innerHTML = "Status : Detecting Objects";
+  document.getElementById("status").innerHTML = "Status: Detectando Objetos";
 }
 
 function modelLoaded() {
-  console.log("Model Loaded!")
+  console.log("Modelo Carregado!")
   status = true;
 }
 
@@ -41,8 +41,8 @@ function draw() {
         b =  random(255);      
         objectDetector.detect(video, gotResult);
         for (i = 0; i < objects.length; i++) {
-          document.getElementById("status").innerHTML = "Status : Object Detected";
-          document.getElementById("number_of_objects").innerHTML = "Number of objects detected are : "+ objects.length;
+          document.getElementById("status").innerHTML = "Status: Objetos Detectados";
+          document.getElementById("numberOfObjects").innerHTML = "Quantidade de Objetos Detectados: "+ objects.length;
  
           fill(r,g,b);
           percent = floor(objects[i].confidence * 100);
