@@ -11,7 +11,7 @@ width: 100%;
 margin: 0px;
 }
 
-#status , #numberOfObjects
+#status , #numberOfObjects , #startModel
 {
 font-size: 18px;
 }
